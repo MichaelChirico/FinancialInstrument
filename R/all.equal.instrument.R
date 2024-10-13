@@ -43,7 +43,8 @@
 #' 
 #' all.equal(getInstrument("DIA"), getInstrument("USD"))
 #' }
-#' @export
+#' @method all.equal instrument
+#' @exportS3Method all.equal instrument
 all.equal.instrument <- function (target, current, char.n=2, collapse=";", ...) {
     stopifnot(is.instrument(target))
     if (char.n < 0) char.n <- Inf
